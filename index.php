@@ -44,7 +44,7 @@
 							$class = 'error';
 						} else if (
 							strpos($lowerLine, 'info') === 0
-							|| strpos($lowerLine, 'loaded') !== false
+							|| strpos($lowerLine, 'loaded ') !== false
 						) {
 							$class = 'info';
 						} else if (strpos($lowerLine, 'success') !== false) {
