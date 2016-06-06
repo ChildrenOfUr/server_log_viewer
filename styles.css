@@ -1,6 +1,6 @@
 body {
 	font-family: sans-serif;
-	background-color: #eee;
+	background-color: black;
 	margin-top: 60px;
 }
 
@@ -9,27 +9,11 @@ body {
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: #fff;
+	background-color: white;
 	padding: 5px;
 	height: 25px;
 }
 
 pre {
 	margin: 0.5em 0;
-}
-
-pre.input {
-	color: purple;
-}
-
-pre.info {
-	color: blue;
-}
-
-pre.success {
-	color: green;
-}
-
-pre.error {
-	color: red;
 }

@@ -3,10 +3,10 @@
 	// {year}: 2016 -> 16
 	// {month}: June -> 06
 	// {day}: 5th -> 05
-	define('NAME_FORMAT', '{month}_{day}_{year}-server.log');
+	define("NAME_FORMAT", "{month}_{day}_{year}-server.log");
 
 	function parseDate($date) {
-		$nums = explode('-', $_GET['logdate']);
+		$nums = explode("-", $_GET["logdate"]);
 		$year = $nums[0];
 		$month = $nums[1];
 		$day = $nums[2];
@@ -17,26 +17,22 @@
 			!is_numeric($month) ||
 			!is_numeric($day)
 		) {
-			die('Invalid log date specified!');
+			die("Invalid log date specified!");
 		}
 
 		return array(
-			'year'	=> $year,
-			'month'	=> $month,
-			'day'	=> $day
+			"year"	=> $year,
+			"month"	=> $month,
+			"day"	=> $day
 		);
 	}
 
 	function getFilename($date) {
 		$filename = NAME_FORMAT;
-		$filename = str_replace('{year}', substr($date['year'], 2), $filename);
-		$filename = str_replace('{month}', $date['month'], $filename);
-		$filename = str_replace('{day}', $date['day'], $filename);
+		$filename = str_replace("{year}", substr($date["year"], 2), $filename);
+		$filename = str_replace("{month}", $date["month"], $filename);
+		$filename = str_replace("{day}", $date["day"], $filename);
 		return $filename;
-	}
-
-	function getLogStr($filename) {
-		return file_get_contents(getLogDirectory() . $filename);
 	}
 
 	function getLog($date) {
@@ -44,6 +40,6 @@
 	}
 
 	function getLogDirectory() {
-		return trim(file_get_contents('log_directory.txt'));
+		return trim(file_get_contents("log_directory.txt"));
 	}
 ?>
