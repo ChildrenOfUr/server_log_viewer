@@ -36,7 +36,7 @@
 						if ($thisColor !== false) {
 							$lastColor = $thisColor;
 						}
-
+						
 						$open = "<pre style=\"color: $lastColor;\">";
 						$html = htmlspecialchars($line);
 
