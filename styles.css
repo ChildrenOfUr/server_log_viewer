@@ -1,8 +1,12 @@
+/* Page */
+
 body {
 	font-family: sans-serif;
 	background-color: black;
 	margin: 60px 0 0 0;
 }
+
+/* Controls */
 
 #header {
 	position: fixed;
@@ -13,6 +17,8 @@ body {
 	padding: 5px;
 	height: 25px;
 }
+
+/* Blocks */
 
 pre {
 	display: block;
@@ -28,6 +34,25 @@ pre {
 	width: calc(100% - 9em);
 	overflow-y: hidden;
 }
+
+/* Collapse/Expand */
+
+pre.collapse {
+	cursor: pointer;
+}
+
+pre.collapse[closed="true"] {
+	height: 16px;
+	cursor: -webkit-zoom-in;
+	border-right-width: 0.5em;
+	padding-right: 0.5em;
+}
+
+pre.collapse[closed="false"] {
+	cursor: -webkit-zoom-out;
+}
+
+/* Context colors */
 
 pre.verbose {
 	color: green;
