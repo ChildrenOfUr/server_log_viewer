@@ -1,7 +1,7 @@
 body {
 	font-family: sans-serif;
 	background-color: black;
-	margin-top: 60px;
+	margin: 60px 0 0 0;
 }
 
 #header {
@@ -15,5 +15,40 @@ body {
 }
 
 pre {
-	margin: 0.5em 0;
+	display: block;
+	font-size: 14px;
+	margin: 1em;
+	width: calc(100% - 8em);
+	color: white;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	padding-left: 10ex;
+	text-indent: -10ex;
+	border-right: 1em solid;
+	width: calc(100% - 9em);
+	overflow-y: hidden;
+}
+
+pre.verbose {
+	color: green;
+}
+
+pre.info {
+	color: cyan;
+}
+
+pre.command {
+	color: purple;
+}
+
+pre.warning {
+	color: orange;
+}
+
+pre.error {
+	color: red;
+}
+
+pre.severe {
+	color: yellow;
 }

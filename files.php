@@ -1,4 +1,9 @@
 <?php
+	/*
+	 * Verifies that log files exist, and reads them from the
+	 * log file folder into string arrays for parsing.
+	 */
+
 	// How files are named
 	// {year}: 2016 -> 16
 	// {month}: June -> 06

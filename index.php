@@ -28,20 +28,7 @@
 				// Find log file
 				$log = getLog($date);
 				if ($log !== false) {
-					// Apply CSS classes to displayed lines based on context
-					$lastColor = $HTML_FALLBACK;
-					$close = "</pre>";
-					foreach ($log as $line) {
-						$thisColor = getHtmlColor($line);
-						if ($thisColor !== false) {
-							$lastColor = $thisColor;
-						}
-						
-						$open = "<pre style=\"color: $lastColor;\">";
-						$html = htmlspecialchars($line);
-
-						echo($open . $html . $close);
-					}
+					displayLog($log);
 				} else {
 					echo("Could not find a log file for the specified date.");
 				}
