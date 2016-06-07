@@ -89,7 +89,7 @@
 			}
 
 			// Add line to block
-			$blockLines .= $line;
+			$blockLines .= htmlspecialchars($line);
 
 			// if ($newColor === false) {
 			// 	// Add line to current block

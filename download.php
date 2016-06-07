@@ -1,10 +1,6 @@
 <?php
-	/*
-	 * Handles the formatting and downloading of logs as RTF files.
-	 */
-
-	require_once("files.php");
-	require_once("format.php");
+	require_once("bin/files.php");
+	require_once("bin/format.php");
 
 	if (isset($_GET["logdate"])) {
 		// Safely parse log date

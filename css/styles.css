@@ -1,0 +1,33 @@
+/* Page */
+
+body {
+	font-family: sans-serif;
+	background-color: black;
+	margin: 60px 0 0 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.button {
+	-webkit-appearance: button;
+}
+
+/* Controls */
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: white;
+	padding: 5px;
+	height: 25px;
+}
+
+#header form {
+	display: inline-block;
+}
+
+#header .right {
+	float: right;
+}

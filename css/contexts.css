@@ -1,0 +1,23 @@
+pre.verbose {
+	color: green;
+}
+
+pre.info {
+	color: cyan;
+}
+
+pre.command {
+	color: purple;
+}
+
+pre.warning {
+	color: orange;
+}
+
+pre.error {
+	color: red;
+}
+
+pre.severe {
+	color: yellow;
+}

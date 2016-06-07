@@ -1,27 +1,44 @@
 <?
-	require_once("files.php");
-	require_once("format.php");
+	require_once("bin/files.php");
+	require_once("bin/format.php");
+
+	$viewing = isset($_GET["logdate"]);
 ?>
 
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>CoU Server Log Viewer</title>
-		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="css/blocks.css">
+		<link rel="stylesheet" href="css/contexts.css">
+		<link rel="stylesheet" href="css/styles.css">
 	</head>
 	<body>
 		<div id="header">
 			<form action="" method="GET">
 				<input type="date" name="logdate" value="<? echo($_GET["logdate"]); ?>" required>
-				<button type="submit">View Log</button>
-				<a href="download.php?logdate=<? echo($_GET["logdate"]); ?>">
-					<button type="button">Download displayed log</button>
-				</a>
+				<button type="submit">View selected log</button>
 			</form>
+
+			<?
+			if ($viewing) {
+				?>
+				<span>&nbsp;&#124;&nbsp;</span>
+
+				<a href="download.php?logdate=<? echo($_GET["logdate"]); ?>">
+					<button>Download displayed log</button></a>
+
+				<span>&nbsp;&#124;&nbsp;</span>
+
+				<button id="top" title="Top">&#9650;</button>
+				<button id="bottom" title="Bottom">&#9660;</button>
+				<?
+			}
+			?>
 		</div>
 
 		<?php
-			if (isset($_GET["logdate"])) {
+			if ($viewing) {
 				// Safely parse date string
 				$date = parseDate($_GET["logdate"]);
 
@@ -36,6 +53,7 @@
 		?>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-		<script src="collapse.js"></script>
+		<script src="js/collapse.js"></script>
+		<script src="js/scroll.js"></script>
 	</body>
 </html>
