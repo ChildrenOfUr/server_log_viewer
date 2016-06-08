@@ -17,10 +17,14 @@ function updateLines() {
 			// Multiple lines
 			$(this).addClass('collapse');
 			$(this).attr('closed', 'true');
+
 			$(this).click(function() {
+				console.log(document.getSelection().toString().length);
 				if ($(this).attr('closed') === 'true') {
+					// Expand on click
 					$(this).attr('closed', 'false');
-				} else {
+				} else if (document.getSelection().toString().length === 0) {
+					// Collapse on click if nothing is being selected
 					$(this).attr('closed', 'true');
 				}
 			});
