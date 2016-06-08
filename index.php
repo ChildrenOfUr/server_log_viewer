@@ -47,7 +47,7 @@
 				if ($log !== false) {
 					displayLog($log);
 				} else {
-					echo("Could not find a log file for the specified date.");
+					echo("<pre>Could not find a log file for the specified date.</pre>");
 				}
 			}
 		?>
