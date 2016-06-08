@@ -16,6 +16,10 @@ pre {
 
 /* Collapse/Expand */
 
+#sizing {
+	visibility: hidden;
+}
+
 pre.collapse[closed="true"] {
 	height: 16px;
 	cursor: -webkit-zoom-in;
