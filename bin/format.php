@@ -90,18 +90,6 @@
 
 			// Add line to block
 			$blockLines .= htmlspecialchars($line);
-
-			// if ($newColor === false) {
-			// 	// Add line to current block
-			// 	$blockLines .= htmlspecialchars($line);
-			// } else if ($thisColor !== false) {
-			// 	// Save the current color block
-			// 	makePre($lastColor, $block);
-			//
-			// 	// Create a new color block
-			// 	$lastColor = $thisColor;
-			// 	$block = "";
-			// }
 		}
 	}
 ?>
