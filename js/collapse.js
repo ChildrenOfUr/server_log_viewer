@@ -19,7 +19,6 @@ function updateLines() {
 			$(this).attr('closed', 'true');
 
 			$(this).click(function() {
-				console.log(document.getSelection().toString().length);
 				if ($(this).attr('closed') === 'true') {
 					// Expand on click
 					$(this).attr('closed', 'false');
