@@ -8,6 +8,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>CoU Server Log Viewer</title>
 		<link rel="stylesheet" href="css/blocks.css">
 		<link rel="stylesheet" href="css/contexts.css">
@@ -25,10 +27,8 @@
 				?>
 				<span>&nbsp;&#124;&nbsp;</span>
 
-				<a href="download.php?logdate=<? echo($_GET["logdate"]); ?>">
+				<a id="download" href="download.php?logdate=<? echo($_GET["logdate"]); ?>">
 					<button>Download displayed log</button></a>
-
-				<span>&nbsp;&#124;&nbsp;</span>
 
 				<button id="top" title="Top">&#9650;</button>
 				<button id="bottom" title="Bottom">&#9660;</button>
